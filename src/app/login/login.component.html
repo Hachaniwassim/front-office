@@ -1,0 +1,210 @@
+<!-- START PRELOADER -->
+<div class="preloader">
+  <div class="status">
+      <div class="status-mes">
+          <div class="loader">
+              <div class="loader__bar"></div>
+              <div class="loader__bar"></div>
+              <div class="loader__bar"></div>
+              <div class="loader__bar"></div>
+              <div class="loader__bar"></div>
+              <div class="loader__ball"></div>
+          </div>
+      </div>
+  </div>
+</div>	
+<!-- Start Slider Area -->
+<section id="slider_area">
+  <div class="slider_active owl-carousel">
+      <div class="slider_item1 single_slide">
+          <div class="container">	
+              <div class="single-slide-item-table">
+                  <div class="single-slide-item-tablecell">    
+                  <div class="slider_content slider-animated-1">
+                          <h2 class="animated"> <span> INCREASE YOUR BUSINESS </span> WITH <span> OURS
+                           </span>  <span align="center"> SCALABLE  </span> SOFTWARE <span align="center"> SOLUTIONS</span></h2>
+                          <br>
+                          <a href="#" class="animated btn main_bg_btn">learn more</a>
+                      </div>	
+                  </div>
+              </div>						
+          </div>
+      </div>
+      
+      <div class="slider_item2 single_slide">
+          <div class="container">		
+              <div class="single-slide-item-table">
+                  <div class="single-slide-item-tablecell">
+                      <div class="slider_content text-center slider-animated-2">
+                          <h2 class="animated"> <span>ADVANCED </span> SOLUTIONS</h2>
+                          <span class="sl_heading animated">We study your needs to offer you the most suitable solutions</span><br>
+                          <span class="sl_heading animated"> for your business</span> 
+                          <br>
+                          <a href="#" class="animated btn main_bg_btn">learn more</a>
+                      </div>	
+                  </div>
+              </div>	
+          </div>
+      </div>
+<div class="slider_active owl-carousel">
+          <div class="slider_item4 single_slide">
+              <div class="container">	
+                  <div class="single-slide-item-table">
+                      <div class="single-slide-item-tablecell">
+                          <div class="slider_content slider-animated-1">
+                              <h2 class="animated"> The software<span> solution </span> for your <span>business</span>  </h2>
+                              <span class="sl_heading animated">Magazine, Accounting, Invoicing</span>
+                              <br>
+                              <a href="#" class="animated btn main_bg_btn">learn more</a>
+                          </div>	
+                      </div>
+                  </div>						
+              </div>
+          </div>
+    </div>
+
+    <div class="slider_active owl-carousel">
+      <div class="slider_item6 single_slide">
+          <div class="container">	
+              <div class="single-slide-item-table">
+                  <div class="single-slide-item-tablecell">
+                  <div class="slider_content text-center slider-animated-1">
+                      <h2 class="animated"> <span>E-Commerce </span> Click&Collect</h2>
+                      <span class="sl_heading animated">The online showcase for your business</span>
+                          <br>
+                          <a href="#" class="animated btn main_bg_btn">learn more</a>
+                      </div>	
+                  </div>
+              </div>						
+          </div>
+      </div>
+  </div>
+ <div class="slider_item8 single_slide text-right">
+          <div class="container"> <br>
+              <div class="single-slide-item-table">
+                  <div class="single-slide-item-tablecell">
+                      <div class="slider_content slider-animated-3">  
+                          <h2 class="animated"> SELLPOINT, THE <span> SOFTWARE</span> FOR YOUR <span> CLOTHING STORE</span>  </h2>
+                          <span class="sl_heading animated">With all your data in real time</span>
+                          <br>
+                          <br>
+                          <a href="#" class="animated btn main_bg_btn">learn more</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+           
+      <div class="slider_item7 single_slide">
+        <div class="container">		<br>
+            <div class="single-slide-item-table">
+                <div class="single-slide-item-tablecell">
+                    <div class="slider_content slider-animated-2">
+                        <h2 class="animated"> <span> DISCOVER OURS</span> FIDILITY MODULE</h2>
+                        <span class="sl_heading animated">Can be integrated with all our software</span>
+                        <br>
+                        <a href="#" class="animated btn main_bg_btn">learn more</a>
+                    </div>	
+                </div>
+            </div>	
+        </div>
+    </div>
+      <div class="slider_item9 single_slide text-right">
+          <div class="container"> <br>
+              <div class="single-slide-item-table">
+                  <div class="single-slide-item-tablecell">
+                      <div class="slider_content slider-animated-3">  
+                          <h2 class="animated"> MONITOR YOUR SALES <span> IN REAL</span> TIME WITH <span> MONITORAPP</span>  </h2>
+                          <span class="sl_heading animated">Wherever and when you want</span>
+                          <br>
+                          <br>
+                          <a href="#" class="animated btn main_bg_btn">learn more</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+</section>
+<div class="auth-wrapper">
+  <div class="auth-content">
+    <div class="auth-bg">
+      <span class="r"></span>
+      <span class="r s"></span>
+      <span class="r s"></span>
+      <span class="r"></span>
+    </div>
+    <div class="col-md-12">
+      <div class="card card-container" align="center">
+        <img  src="../../assets/img/mss2.png" style="width: 60%;"align="center"/><br><br><br>
+        <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+          <div class="form-group">
+            <div class="form-group">
+              <input type="text" class="form-control" name="username" [(ngModel)]="form.username" required
+                placeholder="username" #username="ngModel" />
+              <div class="msg" role="alert" *ngIf="!(f.submitted )&& username.errors && username.invalid && username.touched">
+                Username is required
+              </div>
+              <div class="msg" role="alert" *ngIf="(f.submitted )&& username.errors && username.invalid">
+                Username is required
+              </div>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" [type]="fieldTextType ? 'text' : 'password'" name="password"
+                  [(ngModel)]="form.password" required minlength="6" placeholder="password" #password="ngModel" />
+               
+              <div class=" msg" role="alert"
+                *ngIf=" !(f.submitted) && password.errors && password.touched && password.invalid">
+                <div >Password is required </div>
+              </div>
+              <div class=" msg" role="alert"
+              *ngIf="(f.submitted) && password.errors && password.invalid">
+              <div >Password is required </div>
+            </div>
+            </div>
+            <div class="from-group">
+              <small class="form-text text-right"><a style="text-decoration: none; " (click)="resetpassword()" routerLink="/resetpassword"
+                  class="text-muted " >forgot password? </a></small>
+            </div>
+          <div class="form-group">
+            <div class="g-recaptcha" data-sitekey="6Ley04sfAAAAAEISEbw0tEt73BI_3S16cBUn4gwt"></div>
+            <div *ngIf="captchaError" class="error">Recaptcha not verified.</div>
+          </div>
+        </div>
+          <div class="form-group">
+            <button class="btn btn-primary btn-block">Login</button>
+          </div>
+          <!--<div class="flexbox mb-5">
+            <small class="form-text text-right"><a style="text-decoration: none;"  (click)="register()" routerLink="/register"
+                class="text-muted"> Don't have an account? Signup</a></small>
+          </div>-->
+          <br>
+        </form>
+      </div>
+    </div>
+    <!--<div class="card-body py-5" *ngIf="schooseGroup">
+      <div class="text-center mb-5">
+        <h3 class="mb-3 text-primary"><img src="https://www.igesa.it/assets/common/images/logo/1529316041.png"
+            alt="logo" width="200" class="my-3"></h3>
+        <div class="font-18 text-center">LOGIN WELCOMEBACK
+          <span class="text-blue">{{username}}</span>
+        </div>
+      </div>
+      <form name="form" (ngSubmit)="onSubmit()" #f="ngForm">
+        <div class="mb-4">
+          <div class="md-form mb-0">
+            <mat-select placeholder="Groupes" formControlName="groupeId">
+              <mat-option *ngFor="let groupe of groupeServices" [value]="groupe.id">
+                {{groupe.name}}
+              </mat-option>
+            </mat-select>
+          </div>
+        </div>
+        <div class="flexbox mb-5">
+          <div class="form-group">
+            <button class="btn btn-primary btn-block">Login</button>
+          </div>
+        </div>
+      </form>
+    </div>>-->

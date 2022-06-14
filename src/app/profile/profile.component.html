@@ -1,0 +1,84 @@
+<!-- START PRELOADER -->
+<div class="preloader">
+  <div class="status">
+      <div class="status-mes">
+          <div class="loader">
+              <div class="loader__bar"></div>
+              <div class="loader__bar"></div>
+              <div class="loader__bar"></div>
+              <div class="loader__bar"></div>
+              <div class="loader__bar"></div>
+              <div class="loader__ball"></div>
+          </div>
+      </div>
+  </div>
+</div>	
+<br><br><br>
+<div class="container" *ngIf="currentUser; else loggedOut">
+  <div class="container" >
+    <div class="container" >
+      <div class="container">
+        <div class="container">
+          <div  class="card-body">
+            <img width="300px" height="300px" src="../../assets/img/profile.gif" alt="" srcset=""> <br>
+            <div class="col-sm-12 col-xs-12 text-center wow fadeIn" data-wow-delay=".1s">
+              <div class="section_title">
+                  <h2 style="right: 450px;">Update <span>Profile</span></h2>
+              </div>
+          </div>
+            <form class="example-form" [formGroup]="account"><br><br>
+              <div class="row">
+                <div class="col-md-6 col-sm-6">
+                  <label> Username * </label>
+                  <input type="text" formControlName="username" placeholder="Username" class="form-control">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-sm-6"><br>
+                  <label> Email *</label><br>
+                  <input type="email" formControlName="email" placeholder="Email" class="form-control ">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-sm-6">
+                  <br>
+                  <label> FiscaleCode *</label>
+                  <input type="text" formControlName="fiscaleCode" placeholder="Fiscale Code" class="form-control">
+                </div>
+              </div>
+            </form><br><br>
+            <div class="row">
+            <div class="col-md-6 col-sm-6">&nbsp;&nbsp;
+            <button mat-raised-button color="primary" style="width: 85px;"(click)="save()">Save</button>  &nbsp;&nbsp;
+            <button mat-raised-button>Canncel</button>
+            </div>
+            </div><br>
+          <div ><br>
+            <h5> Update Password with email</h5>
+            <form class="example-form" #emailForm="ngForm" (ngSubmit)="onResetPassword(emailForm)"><br><br>
+              <div class="row">
+                <div class="col-md-6 col-sm-6">
+                  <input type="email" class="form-control" name="reset-password-email" id="reset-password-email" ngModel
+                    required placeholder="Enter your Email" /><br>
+                </div>
+              </div>
+              <button mat-raised-button color="primary" style="width: 110px;" [disabled]="emailForm.invalid"
+                type="submit">
+                <i *ngIf="refreshing" class="fas fa-spinner fa-spin"></i>&nbsp;&nbsp;
+                <span *ngIf="refreshing">Loading...</span>
+                <span *ngIf="!refreshing">Reset</span>
+              </button>&nbsp;&nbsp;
+              <button mat-raised-button color="warn" style="width: 110px;">Canncel</button>
+              <br><br>
+            </form><br><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+<div><br><br><br>
+  <ng-template #loggedOut>
+    Please login.
+  </ng-template>
